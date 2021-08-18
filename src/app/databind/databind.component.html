@@ -1,0 +1,33 @@
+<h3>String interpolation</h3>
+<br>
+<p>Hello {{dynamicName}}</p>
+
+<p> {{"Welcome " + dynamicName}} </p>
+
+<p>Length of Name : {{dynamicName.length}}</p>
+
+<p>UpperCase : {{dynamicName.toUpperCase()}}</p>
+
+<p>LowerCase : {{dynamicName.toLowerCase()}}</p>
+
+<p>We can handle expression in string interpolation : {{5+9}}</p>
+
+<p>Get Name using method : {{myName()}} </p>
+
+<p>My App Status is ? {{appStatus ? 'Online' : 'Offline'}}</p>
+
+<br>
+<h3>Property Binding</h3>
+<br>
+
+<p>Property Binding : Way-1</p>
+<input type="text" [disabled]="enable" name="" id="" [value]="dynamicName">
+
+<br><br>
+<p>Property Binding : Way-2</p>
+<input type="text" [disabled]="!enable" name="" id="" bind-value="dynamicName">
+
+<br><br>
+<p>Ternary Operator in Property Binding</p>
+
+<input type="text" name="" id="" [value]="enable ? 'Ashraful' : dynamicName">
