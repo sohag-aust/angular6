@@ -1,0 +1,11 @@
+<div class="box" [class.myClass]="true" [style.margin]="myStyle1">
+    <p>class-style works!</p>
+</div>
+<div class="box2" [class.myClass]="true" [style.margin-left]="hasStyle ? myStyle1 : '50px'">
+    <p>class-style works!</p>
+</div>
+
+<h1>Adding Multiple style using : ngClass & ngStyle</h1>
+<div class="box" [ngClass]="mltClasses" [ngStyle]="mltStyles">
+    <p>multiple class-style works!</p>
+</div>
