@@ -1,0 +1,46 @@
+
+<!-- 
+    Events for your Reference
+
+(focus)="myMethod()"  // An element has received focus
+(blur)="myMethod()"   // An element has lost focus
+
+(submit)="myMethod()"  // A submit button has been pressed
+
+(scroll)="myMethod()"
+
+(cut)="myMethod()"
+(copy)="myMethod()"
+(paste)="myMethod()"
+
+(keydown)="myMethod()"
+(keypress)="myMethod()"
+(keyup)="myMethod()"
+
+(mouseenter)="myMethod()"
+(mousedown)="myMethod()"
+(mouseup)="myMethod()"
+
+(click)="myMethod()"
+(dblclick)="myMethod()"
+
+(drag)="myMethod()"
+(dragover)="myMethod()"
+(drop)="myMethod()"
+
+-->
+
+ <p>event-bind works!</p>
+ <br>
+ <button (click)="onAddToCart()">Add to Cart</button> <!-- event method added -->
+ <br><br>
+
+ <p>{{clickMessage}}</p>
+ <br>
+
+ <input type="text" name="" id="" value="myInputText" (click)="onInputClick($event)">
+ <br><br>
+ <button value="Laptop" (click)="onProduct($event)">Add Laptop</button>
+ <button value="TV" (click)="onProduct($event)">Add TV</button>
+
+ <p>{{productBuy}}</p>
