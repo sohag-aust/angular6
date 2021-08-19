@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // adding ngx-bootstrap dependencies
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { NgIfComponent } from './ng-if/ng-if.component';
+import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NgIfComponent } from './ng-if/ng-if.component';
     ClassStyleComponent,
     EventBindComponent,
     TwoWayDatabindComponent,
-    NgIfComponent
+    NgIfComponent,
+    NgSwitchComponent
   ],
   imports: [
     BrowserModule,
