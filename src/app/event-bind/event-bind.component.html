@@ -44,3 +44,11 @@
  <button value="TV" (click)="onProduct($event)">Add TV</button>
 
  <p>{{productBuy}}</p>
+
+ <br><br>
+
+ <!-- Template Reference variable | Local Reference variable start -->
+ <h3>Template Reference variable | Local Reference variable start</h3>
+
+ <input #inputInfo type="text" value="Shohag" name="">
+ <button (click)="getInputInfo(inputInfo)">Get Info</button>

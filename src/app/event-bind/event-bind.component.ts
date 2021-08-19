@@ -27,4 +27,8 @@ export class EventBindComponent implements OnInit {
     this.productBuy = "Product of type : " + event.target.value +" is sold !";
     console.log("Product of type : " + event.target.value +" is sold !");
   }
+
+  getInputInfo(inputInfo) {
+    console.log(`input value by template/local variable reference : ${inputInfo.value}`);
+  }
 }
