@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Serial No.</th>
+                        <th>Product Id</th>
+                        <th>Product Name</th>
+                        <th>Product Image</th>
+                        <th>Product Price</th>
+                    </tr>
+                </thead>
+                
+                <tbody class="thead-dark">
+                    <tr *ngFor=" let product of products; index as i ">
+                        <td>#{{i+1}}</td>
+                        <td>{{product.id}}</td>
+                        <td>{{product.name}}</td>
+                        <td><img src="{{product.img}}" width="70px" alt="product image missing"></td>
+                        <td>{{product.price}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
