@@ -13,6 +13,10 @@ import { DatabindComponent } from './databind/databind.component';
 import { ClassStyleComponent } from './databind/class-style/class-style.component';
 import { EventBindComponent } from './event-bind/event-bind.component';
 import { TwoWayDatabindComponent } from './databind/two-way-databind/two-way-databind.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// adding ngx-bootstrap dependencies
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,9 @@ import { TwoWayDatabindComponent } from './databind/two-way-databind/two-way-dat
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    BsDatepickerModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
