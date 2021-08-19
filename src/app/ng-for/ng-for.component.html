@@ -25,3 +25,45 @@
         </div>
     </div>
 </div>
+
+<br><br>
+
+<!-- Push and Splice with ngFor -->
+<h1> Push and Splice with ngFor </h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <input #username type="text" class="form-control" placeholder="User Name">
+        </div>
+
+        <div class="col-md-3">
+            <button class="btn btn-success" (click)="onCreateUser(username)">Create User</button>
+        </div>
+
+        <div class="col-md-3">
+            <button class="btn btn-danger" (click)="onRemoveUser()">Remove User from Last</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10">
+            <div class="col-md-10">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Username</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody class="thead-dark">
+                        <tr *ngFor=" let user of usersName; index as i ">
+                            <td>{{user}}</td>
+                            <td><button class="btn btn-danger" (click)="onIndividualUserRemove(i)">Remove User</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

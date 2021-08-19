@@ -37,6 +37,19 @@ export class NgForComponent implements OnInit {
       img:'https://source.unsplash.com/collection/490727/',
       price: 200
     }
-  ]
+  ];
 
+  usersName: Array<string> = [];
+
+  onCreateUser(user) {
+    this.usersName.push(user.value);
+  }
+
+  onRemoveUser() {
+    this.usersName.splice(this.usersName.length-1);
+  }
+
+  onIndividualUserRemove(removeIndexUser) {
+    this.usersName.splice(removeIndexUser,1); // we want to delete 1 user of particular index
+  }
 }
