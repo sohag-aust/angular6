@@ -32,6 +32,7 @@ import { Icecream1Component } from './products/icecream1/icecream1.component';
 import { Icecream2Component } from './products/icecream2/icecream2.component';
 import { Icecream3Component } from './products/icecream3/icecream3.component';
 import { Icecream4Component } from './products/icecream4/icecream4.component';
+import { CardComponent } from './card/card.component';
 
 const appRoutes: Routes = [
   // {path:'', component: HomeComponent}, we can set default route
@@ -69,7 +70,8 @@ const appRoutes: Routes = [
     Icecream1Component,
     Icecream2Component,
     Icecream3Component,
-    Icecream4Component
+    Icecream4Component,
+    CardComponent
   ],
   imports: [
     BrowserModule,
