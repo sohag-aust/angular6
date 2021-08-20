@@ -5,4 +5,13 @@
             <p class="text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error id itaque commodi recusandae. Eos nisi id reprehenderit aliquam, repellat, obcaecati inventore, architecto quibusdam pariatur nulla culpa. Provident id nesciunt harum.</p>
         </div>
     </div>
+
+    <!-- ng-container practice -->
+    <div class="products">
+        <ng-container *ngIf="statusOnline">     <!-- (similar as Fragment in React) using ng-container instead of div for avoiding unnecessary adding of extra divs'-->
+            <div *ngFor="let product of products">
+                {{product.name}}
+            </div>
+        </ng-container>
+    </div>
 </div>
