@@ -28,12 +28,22 @@ import { ProductsComponent } from './products/products.component';
 
 // adding routes
 import { RouterModule, Routes } from '@angular/router';
+import { Icecream1Component } from './products/icecream1/icecream1.component';
+import { Icecream2Component } from './products/icecream2/icecream2.component';
+import { Icecream3Component } from './products/icecream3/icecream3.component';
+import { Icecream4Component } from './products/icecream4/icecream4.component';
 
 const appRoutes: Routes = [
   // {path:'', component: HomeComponent}, we can set default route
   {path:'', component: HomeComponent},
   {path:'about', component: AboutComponent},
-  {path:'products', component: ProductsComponent},
+  {path:'products', children: [
+    {path:'', component: ProductsComponent}, // path here look like : localhost:4200/products
+    {path:'cream1', component: Icecream1Component},
+    {path:'cream2', component: Icecream2Component},
+    {path:'cream3', component: Icecream3Component},
+    {path:'cream4', component: Icecream4Component},
+  ]},
   {path:'contact', component: ContactComponent}
 ]; 
 
@@ -55,7 +65,11 @@ const appRoutes: Routes = [
     AboutComponent,
     ContactComponent,
     HomeComponent,
-    ProductsComponent
+    ProductsComponent,
+    Icecream1Component,
+    Icecream2Component,
+    Icecream3Component,
+    Icecream4Component
   ],
   imports: [
     BrowserModule,
