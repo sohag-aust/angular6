@@ -31,7 +31,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
   // {path:'', component: HomeComponent}, we can set default route
-  {path:'home', component: HomeComponent},
+  {path:'', component: HomeComponent},
   {path:'about', component: AboutComponent},
   {path:'products', component: ProductsComponent},
   {path:'contact', component: ContactComponent}
