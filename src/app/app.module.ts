@@ -17,9 +17,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // adding ngx-bootstrap dependencies
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+
 import { NgIfComponent } from './ng-if/ng-if.component';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { NgForComponent } from './ng-for/ng-for.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
+import { ProductsComponent } from './products/products.component';
+
+// adding routes
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  // {path:'', component: HomeComponent}, we can set default route
+  {path:'home', component: HomeComponent},
+  {path:'about', component: AboutComponent},
+  {path:'products', component: ProductsComponent},
+  {path:'contact', component: ContactComponent}
+]; 
 
 @NgModule({
   declarations: [
@@ -35,14 +51,19 @@ import { NgForComponent } from './ng-for/ng-for.component';
     TwoWayDatabindComponent,
     NgIfComponent,
     NgSwitchComponent,
-    NgForComponent
+    NgForComponent,
+    AboutComponent,
+    ContactComponent,
+    HomeComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    BsDatepickerModule.forRoot()
+    BsDatepickerModule.forRoot(),
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
