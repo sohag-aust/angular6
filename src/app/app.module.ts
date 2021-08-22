@@ -35,6 +35,7 @@ import { Icecream4Component } from './products/icecream4/icecream4.component';
 import { CardComponent } from './card/card.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { DesignUtilityService } from './services/design-utility.service';
 
 const appRoutes: Routes = [
   // {path:'', component: HomeComponent}, we can set default route
@@ -86,7 +87,7 @@ const appRoutes: Routes = [
     BsDatepickerModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [DesignUtilityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

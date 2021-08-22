@@ -1,5 +1,5 @@
 export class ContactService {
-    contactAlert(serviceName) {
+    contactAlert(serviceName:string) {
         alert(`${serviceName} Service is called !`);
     }
 }
