@@ -14,7 +14,7 @@ export class ParentComponent implements OnInit {
 
   productSelectedOnParent: boolean = false;
   selectedProductOnParent: string = '';
-  // addedProduct: any;
+  addedProduct: any;
 
   onSelectProduct(product:string) {
     this.productSelectedOnParent = true;
@@ -25,5 +25,8 @@ export class ParentComponent implements OnInit {
   //   this.addedProduct = this.selectedProduct;
   // }
 
+  onAddedProduct(productFromChild) {
+    this.addedProduct = productFromChild;
+  }
 
 }

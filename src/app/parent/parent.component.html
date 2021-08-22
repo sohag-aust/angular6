@@ -6,10 +6,10 @@
         </div>
     </div>
 
-    <!-- <div class="alert alert-danger  border d-flex" role="alert" *ngIf="addedProduct">
+    <div class="alert alert-danger  border d-flex" role="alert" *ngIf="addedProduct">
         <strong class="text-primary">{{addedProduct}} </strong> &nbsp; is selected and added in cart
         <button class="btn btn-success ml-auto">Checkout</button>
-    </div> -->
+    </div>
 
     <hr class="mb-3">
 
@@ -48,6 +48,7 @@
         <app-child class="w-100" [placeholderText]="'Search Product in Parent'"
                                 [productSelectedOnChild]="productSelectedOnParent"
                                 [selectedProductOnChild]="selectedProductOnParent"
+                                (addedProduct)="onAddedProduct($event)"
                                 >
                             </app-child>
         

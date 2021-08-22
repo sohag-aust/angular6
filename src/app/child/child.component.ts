@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
+// import * as EventEmitter from 'events';
 
 @Component({
   selector: 'app-child',
@@ -16,7 +17,7 @@ export class ChildComponent implements OnInit {
 
   @Input() productSelectedOnChild: boolean = false;
   @Input() selectedProductOnChild: string = '';
-  addedProduct: any;
+  @Output() addedProduct = new EventEmitter<any>();
 
   onSelectProduct(product:string) {
     this.productSelectedOnChild = true;
@@ -24,6 +25,6 @@ export class ChildComponent implements OnInit {
   }
 
   onAddProduct(){
-    this.addedProduct = this.selectedProductOnChild;
+    this.addedProduct.emit(this.selectedProductOnChild);
   }
 }
