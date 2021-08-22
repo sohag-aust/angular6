@@ -1,0 +1,56 @@
+<div class="container bg-success">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h2 class="text-center">Products works!</h2>
+            <p class="text-black">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error id itaque commodi recusandae. Eos nisi id reprehenderit aliquam, repellat, obcaecati inventore, architecto quibusdam pariatur nulla culpa. Provident id nesciunt harum.</p>
+        </div>
+    </div>
+
+    <div class="alert alert-danger  border d-flex" role="alert" *ngIf="addedProduct">
+        <strong class="text-primary">{{addedProduct}} </strong> &nbsp; is selected and added in cart
+        <button class="btn btn-success ml-auto">Checkout</button>
+    </div>
+
+    <hr class="mb-3">
+
+    <div class="row">
+        <div class="d-flex">
+            <div class="card" style="width: 18rem;">
+                <img src="../../assets/image/1.jpg" style="width: 250px; height: 250px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Strawberry</h5>
+                  <button class="btn btn-success" (click)="onSelectProduct('Strawberry')">Select</button>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="../../assets/image/2.jpg" style="width: 250px; height: 250px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Blueberry</h5>
+                  <button class="btn btn-success" (click)="onSelectProduct('Blueberry')">Select</button>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="../../assets/image/3.jpg" style="width: 250px; height: 250px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Mango</h5>
+                  <button class="btn btn-success" (click)="onSelectProduct('Mango')">Select</button>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="../../assets/image/4.jpg" style="width: 250px; height: 250px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Lemon</h5>
+                  <button class="btn btn-success" (click)="onSelectProduct('Lemon')">Select</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 text-center py-4">
+            <h2 *ngIf="!productSelected">Please select any product</h2>
+            <h2 *ngIf="productSelected">{{selectedProduct}} is selected</h2>
+            <button class="btn btn-danger" (click)="onAddProduct()">Add to card</button>
+        </div>
+    </div>
+
+
+</div>

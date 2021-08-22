@@ -33,6 +33,8 @@ import { Icecream2Component } from './products/icecream2/icecream2.component';
 import { Icecream3Component } from './products/icecream3/icecream3.component';
 import { Icecream4Component } from './products/icecream4/icecream4.component';
 import { CardComponent } from './card/card.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 const appRoutes: Routes = [
   // {path:'', component: HomeComponent}, we can set default route
@@ -45,7 +47,8 @@ const appRoutes: Routes = [
     {path:'cream3', component: Icecream3Component},
     {path:'cream4', component: Icecream4Component},
   ]},
-  {path:'contact', component: ContactComponent}
+  {path:'contact', component: ContactComponent},
+  {path:'buy-products', component: ParentComponent}
 ]; 
 
 @NgModule({
@@ -71,7 +74,9 @@ const appRoutes: Routes = [
     Icecream2Component,
     Icecream3Component,
     Icecream4Component,
-    CardComponent
+    CardComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
