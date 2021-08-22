@@ -6,10 +6,10 @@
         </div>
     </div>
 
-    <div class="alert alert-danger  border d-flex" role="alert" *ngIf="addedProduct">
+    <!-- <div class="alert alert-danger  border d-flex" role="alert" *ngIf="addedProduct">
         <strong class="text-primary">{{addedProduct}} </strong> &nbsp; is selected and added in cart
         <button class="btn btn-success ml-auto">Checkout</button>
-    </div>
+    </div> -->
 
     <hr class="mb-3">
 
@@ -45,11 +45,14 @@
             </div>
         </div>
 
-        <div class="col-md-12 text-center py-4">
-            <h2 *ngIf="!productSelected">Please select any product</h2>
-            <h2 *ngIf="productSelected">{{selectedProduct}} is selected</h2>
-            <button class="btn btn-danger" (click)="onAddProduct()">Add to card</button>
-        </div>
+        <app-child class="w-100" [placeholderText]="'Search Product in Parent'"
+                                [productSelectedOnChild]="productSelectedOnParent"
+                                [selectedProductOnChild]="selectedProductOnParent"
+                                >
+                            </app-child>
+        
+
+        
     </div>
 
 

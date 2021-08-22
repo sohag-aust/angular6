@@ -1,0 +1,7 @@
+<input type="text" placeholder="{{placeholderText}}" value="">
+
+<div class="col-md-12 text-center py-4 bg-warning">
+    <h2 *ngIf="!productSelectedOnChild">Please select any product</h2>
+    <h2 *ngIf="productSelectedOnChild">{{selectedProductOnChild}} is selected</h2>
+    <button class="btn btn-danger" (click)="onAddProduct()">Add to card</button>
+</div>
