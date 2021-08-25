@@ -11,7 +11,10 @@ export class ContactComponent implements OnInit {
 
   constructor(private _utilityService:DesignUtilityService) { }
 
+  products: any = {};
+
   ngOnInit(): void {
+    this.products = this._utilityService.products;
   }
 
   // service call without dependency injection
@@ -23,5 +26,4 @@ export class ContactComponent implements OnInit {
   btnClickWithDependencyInjection(serviceName:string) {
     this._utilityService.contactAlert(serviceName);
   }
-
 }

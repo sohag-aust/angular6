@@ -26,4 +26,14 @@
             </app-card>
         </div>
     </div>
+
+    <div class="card">
+        <div class="card-body">
+            <ng-container *ngFor="let product of products;">
+                Product Name : <strong>{{product.name}}</strong> <br>
+                Product Id : <strong>{{product.id}}</strong>
+                <br><br>
+            </ng-container>
+        </div>
+    </div>
 </div>
