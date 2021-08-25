@@ -14,7 +14,9 @@ export class ContactComponent implements OnInit {
   products: any = {};
 
   ngOnInit(): void {
-    this.products = this._utilityService.products;
+    // this.products = this._utilityService.products;
+    this._utilityService.product()
+                        .subscribe( (productData) => this.products = productData );
   }
 
   // service call without dependency injection

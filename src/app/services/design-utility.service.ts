@@ -1,11 +1,13 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DesignUtilityService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   contactAlert(serviceName:string) {
     alert(`${serviceName} Service is called using Dependency Injection!`);
@@ -17,4 +19,9 @@ export class DesignUtilityService {
     {name:'KeyBoard', id:3},
     {name:'Monitor', id:4}
   ];
+
+  url: string = 'https://jsonplaceholder.typicode.com/users';
+  product():Observable<any>{
+    return this.http.get(this.url);
+  }
 }

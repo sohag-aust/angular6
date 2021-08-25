@@ -37,6 +37,8 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { DesignUtilityService } from './services/design-utility.service';
 
+import {HttpClientModule} from '@angular/common/http';
+
 const appRoutes: Routes = [
   // {path:'', component: HomeComponent}, we can set default route
   {path:'', component: HomeComponent},
@@ -85,7 +87,8 @@ const appRoutes: Routes = [
     FormsModule,
     BrowserAnimationsModule,
     BsDatepickerModule.forRoot(),
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [DesignUtilityService],
   bootstrap: [AppComponent]
