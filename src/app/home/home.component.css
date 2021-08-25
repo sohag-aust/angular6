@@ -1,0 +1,9 @@
+.box {
+    background-color: rgb(247, 132, 155);
+    margin: 5px 5px;
+}
+
+.row {
+    margin: auto;
+    padding: 20px;
+}

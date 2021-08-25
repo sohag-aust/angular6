@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -24,4 +24,7 @@ export class DesignUtilityService {
   product():Observable<any>{
     return this.http.get(this.url);
   }
+
+  // subject & behavior subject
+  userName = new Subject<any>();
 }
