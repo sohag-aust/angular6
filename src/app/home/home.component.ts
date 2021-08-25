@@ -26,5 +26,5 @@ export class HomeComponent implements OnInit {
 
   statusOnline: boolean = true;
 
-  userName: string='Shohag';
+  userName;
 }

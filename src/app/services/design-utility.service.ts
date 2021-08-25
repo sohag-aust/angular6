@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -26,5 +26,8 @@ export class DesignUtilityService {
   }
 
   // subject & behavior subject
-  userName = new Subject<any>();
+  // userName = new Subject<any>();
+  
+  // same as subject, but in behavior subject we can set initial value, so that in each component we don't need to set initial value
+  userName = new BehaviorSubject('Shohag');
 }
