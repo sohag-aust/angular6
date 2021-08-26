@@ -1,0 +1,19 @@
+<div class="box">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="text-center">
+                <h3>Life-Cycle Hooks</h3>
+                <input type="text" placeholder="enter text" #val>
+                <button (click)="submitValue(val)" class="btn btnSuccess">submit</button>
+            </div>
+            
+            <app-comp5 *ngIf="componentExist" [myValue]="value">ngContent : {{value}}</app-comp5>
+
+            <br><br>
+            <div class="col-md-12 text-center">
+                <button (click)="destroy()" class="btn btn-danger">Destroy Component</button>
+            </div>
+            
+        </div>
+    </div>
+</div>

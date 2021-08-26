@@ -42,6 +42,8 @@ import { Comp1Component } from './home/comp1/comp1.component';
 import { Comp2Component } from './home/comp2/comp2.component';
 import { Comp3Component } from './home/comp3/comp3.component';
 import { Comp4Component } from './home/comp4/comp4.component';
+import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
+import { Comp5Component } from './life-cycle-hooks/comp5/comp5.component';
 
 const appRoutes: Routes = [
   // {path:'', component: HomeComponent}, we can set default route
@@ -55,7 +57,8 @@ const appRoutes: Routes = [
     {path:'cream4', component: Icecream4Component},
   ]},
   {path:'contact', component: ContactComponent},
-  {path:'buy-products', component: ParentComponent}
+  {path:'buy-products', component: ParentComponent},
+  {path:'life-cycle-hooks', component: LifeCycleHooksComponent}
 ]; 
 
 @NgModule({
@@ -87,7 +90,9 @@ const appRoutes: Routes = [
     Comp1Component,
     Comp2Component,
     Comp3Component,
-    Comp4Component
+    Comp4Component,
+    LifeCycleHooksComponent,
+    Comp5Component
   ],
   imports: [
     BrowserModule,
