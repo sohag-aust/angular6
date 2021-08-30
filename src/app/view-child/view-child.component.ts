@@ -1,5 +1,8 @@
-import { Component, ElementRef, OnInit, ViewChild, AfterViewInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, AfterViewInit, Renderer2, HostListener } from '@angular/core';
 import {CompViewChildComponent} from './comp-view-child/comp-view-child.component';
+
+// added $ for jQuery
+declare var $: any;
 
 @Component({
   selector: 'app-view-child',
@@ -16,6 +19,9 @@ export class ViewChildComponent implements OnInit, AfterViewInit {
   constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
+    $(window).scroll(function() {
+      console.log('scrolling using jQuery');
+    })
   }
 
   ngAfterViewInit() : any {
@@ -52,4 +58,14 @@ export class ViewChildComponent implements OnInit, AfterViewInit {
     this.childComponent.updateUserNameFromParent(this.childComponent.inputValueName);
   }
 
+
+  // HostListener added for click function
+  @HostListener('click') myClick() { // here click is the event of HostListener
+    alert('Clicked using HostListener !!');
+  }
+
+  // HostListener added for scroll function
+  @HostListener('window: scroll', ['$event']) myScroll() {
+    console.log('== Scrolling using HostListener !!');
+  }
 }
