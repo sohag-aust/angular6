@@ -16,4 +16,13 @@
     <br><br>
     <p> <strong> Multiple pipe : {{pipeDate | date:'fullDate' | uppercase}} </strong> <p>
 
+    <br><br>
+    <p> <strong> Custom pipe : {{pipeValue | custompipe}} </strong> <p>
+
+    <p> <strong>Array Pipe</strong>
+    <ul>
+        <li *ngFor="let name of namePipeArray"> 
+            {{name | custompipe:8}}
+        </li>
+    </ul>
 </div>

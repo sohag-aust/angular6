@@ -14,4 +14,13 @@ export class PipesComponent implements OnInit {
 
   pipeValue: string = 'Initial pipe value';
   pipeDate: Date = new Date();
+  namePipeArray: Array<string> = [
+    'Mashrafee',
+    'Tamim Iqbal',
+    'Mushfiq',
+    'Sakib',
+    'Mahmudullah Riyad',
+    'Mustafizur Rahman',
+    'Taskin Ahmed'
+  ];
 }
