@@ -1,0 +1,19 @@
+<div class="pipe text-center my-3">
+    <h3> Pipe in Angular </h3>
+    <p> <strong> Initial value : {{pipeValue}} </strong> </p>
+    <p> <strong> UpperCase Pipe : {{pipeValue | uppercase}} </strong> </p>
+    <p> <strong> LowerCase Pipe : {{pipeValue | lowercase}} </strong> </p>
+    <p> <strong> TitleCase Pipe : {{pipeValue | titlecase}} </strong> </p>
+    <p> <strong> Slice Pipe : {{pipeValue | slice: 2: 10}} </strong> </p> <!-- from index 2-9 would be shown from initial value -->
+
+    <br><br>
+    <p> <strong> Initial Date : {{pipeDate | date}} </strong> </p>
+    <p> <strong> Short Date : {{pipeDate | date:'short'}} </strong> </p>
+    <p> <strong> Medium Date : {{pipeDate | date:'medium'}} </strong> </p>
+    <p> <strong> Full Date : {{pipeDate | date:'fullDate'}} </strong> </p>
+    <p> <strong> Short Time : {{pipeDate | date:'shortTime'}} </strong> </p>
+
+    <br><br>
+    <p> <strong> Multiple pipe : {{pipeDate | date:'fullDate' | uppercase}} </strong> <p>
+
+</div>

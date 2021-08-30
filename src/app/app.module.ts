@@ -48,6 +48,7 @@ import { ViewChildComponent } from './view-child/view-child.component';
 import { CompViewChildComponent } from './view-child/comp-view-child/comp-view-child.component';
 import { DirectiveDirective } from './appDirective/directive.directive';
 import { HostListenerDirectiveDirective } from './appDirective/host-listener-directive.directive';
+import { PipesComponent } from './pipes/pipes.component';
 
 const appRoutes: Routes = [
   // {path:'', component: HomeComponent}, we can set default route
@@ -63,7 +64,8 @@ const appRoutes: Routes = [
   {path:'contact', component: ContactComponent},
   {path:'buy-products', component: ParentComponent},
   {path:'life-cycle-hooks', component: LifeCycleHooksComponent},
-  {path: 'view-child', component: ViewChildComponent}
+  {path: 'view-child', component: ViewChildComponent},
+  {path: 'pipes', component: PipesComponent}
 ]; 
 
 @NgModule({
@@ -101,7 +103,8 @@ const appRoutes: Routes = [
     ViewChildComponent,
     CompViewChildComponent,
     DirectiveDirective,
-    HostListenerDirectiveDirective
+    HostListenerDirectiveDirective,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
