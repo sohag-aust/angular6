@@ -4,5 +4,10 @@
     <div class="">
         <input type="text" placeholder="Enter name" #uName [(ngModel)]="inputValueName" (input)="getInputValue()">
         <button class="btn btn-success mx-3" (click)="updateUserName(uName)">update</button>
+        <button class="btn btn-primary mx-3" (click)="addText()">Add text using DOM</button>
+        <ng-content>
+
+        </ng-content>
+
     </div>
 </div>

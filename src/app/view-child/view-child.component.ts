@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, AfterViewInit, Renderer2 } from '@angular/core';
 import {CompViewChildComponent} from './comp-view-child/comp-view-child.component';
 
 @Component({
@@ -13,7 +13,7 @@ export class ViewChildComponent implements OnInit, AfterViewInit {
 
   @ViewChild(CompViewChildComponent) childComponent!: CompViewChildComponent; 
 
-  constructor() { }
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
   }
@@ -22,9 +22,20 @@ export class ViewChildComponent implements OnInit, AfterViewInit {
     console.log('\nngAfterViewInit is called !!');
     console.log(this.myBox);
 
-    this.myBox.nativeElement.style.backgroundColor = 'pink';
-    this.myBox.nativeElement.classList = "pinkBox";
+    /** ViewChild option starts */
+    // this.myBox.nativeElement.style.backgroundColor = 'pink';
+    // this.myBox.nativeElement.classList = "pinkBox";
     // this.myBox.nativeElement.innerHTML = 'This is modified html';
+
+    /** ViewChild option ends */
+
+    /** Renderer2 option starts */
+    this.renderer.setStyle(this.myBox.nativeElement, 'backgroundColor', 'yellow');
+    this.renderer.setStyle(this.myBox.nativeElement, 'color', 'red');
+    this.renderer.addClass(this.myBox.nativeElement, 'rendererClass');
+    this.renderer.setAttribute(this.myBox.nativeElement, 'title', 'Renderer Box');
+
+    /** Renderer2 option ends */
 
     console.log(this.childComponent);
   }
