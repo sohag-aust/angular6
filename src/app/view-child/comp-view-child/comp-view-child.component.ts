@@ -1,4 +1,6 @@
-import { Component, OnInit, Input, ContentChild, ElementRef, AfterContentInit, Renderer2 } from '@angular/core';
+import { Component, OnInit, Input, ContentChild, ElementRef, AfterContentInit, Renderer2, ViewChild } from '@angular/core';
+
+import { DirectiveDirective } from 'src/app/appDirective/directive.directive';
 
 @Component({
   selector: 'app-comp-view-child',
@@ -48,4 +50,8 @@ export class CompViewChildComponent implements OnInit, AfterContentInit {
     this.renderer.appendChild(this.childParagraph.nativeElement, text);
   }
 
+  @ViewChild(DirectiveDirective) myDirective!: DirectiveDirective;
+  changeColor(color: string) {
+    this.myDirective.changeBG(color);
+  }
 }
