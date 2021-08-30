@@ -1,0 +1,20 @@
+<div class="container bg-info">
+    <h2>ViewChild Decorator</h2>
+
+
+    <div #box> <!-- template reference (use as id as per DOM manipulation) for accessing DOM using view-child decorator -->
+        <h3 style="text-align: center;">User name is : <strong class="bg-success">{{userName}}</strong></h3>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <button (click)="changeChildProperty()">Change Child property from parent</button>
+            <button (click)="callChildMethod()" class="ml-3">Call Child method from parent</button>
+        </div>
+
+        <div class="col-md-6">
+            <app-comp-view-child></app-comp-view-child>
+        </div>
+    </div>
+</div>
+
