@@ -60,9 +60,9 @@ export class ViewChildComponent implements OnInit, AfterViewInit {
 
 
   // HostListener added for click function
-  @HostListener('click') myClick() { // here click is the event of HostListener
-    alert('Clicked using HostListener !!');
-  }
+  // @HostListener('click') myClick() { // here click is the event of HostListener
+  //   alert('Clicked using HostListener !!');
+  // }
 
   // HostListener added for scroll function
   @HostListener('window: scroll', ['$event']) myScroll() {

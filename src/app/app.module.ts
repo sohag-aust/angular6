@@ -47,6 +47,7 @@ import { Comp5Component } from './life-cycle-hooks/comp5/comp5.component';
 import { ViewChildComponent } from './view-child/view-child.component';
 import { CompViewChildComponent } from './view-child/comp-view-child/comp-view-child.component';
 import { DirectiveDirective } from './appDirective/directive.directive';
+import { HostListenerDirectiveDirective } from './appDirective/host-listener-directive.directive';
 
 const appRoutes: Routes = [
   // {path:'', component: HomeComponent}, we can set default route
@@ -99,7 +100,8 @@ const appRoutes: Routes = [
     Comp5Component,
     ViewChildComponent,
     CompViewChildComponent,
-    DirectiveDirective
+    DirectiveDirective,
+    HostListenerDirectiveDirective
   ],
   imports: [
     BrowserModule,

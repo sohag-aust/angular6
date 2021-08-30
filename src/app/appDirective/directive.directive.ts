@@ -12,4 +12,6 @@ export class DirectiveDirective {
   changeBG(color: string) {
     this.renderer.setStyle(this.elementRef.nativeElement, 'backgroundColor', color);
   }
+
+  
 }
