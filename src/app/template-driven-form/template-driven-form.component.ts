@@ -32,6 +32,9 @@ export class TemplateDrivenFormComponent implements OnInit {
     this.formData.email = this.form.value.userDetails.email;
     this.formData.course = this.form.value.course;
     this.formData.gender = this.form.value.gender;
+
+    // reset form values
+    this.form.reset();
   }
 
   defaultCourse: string = "Angular";
