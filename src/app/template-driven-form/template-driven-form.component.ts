@@ -21,4 +21,16 @@ export class TemplateDrivenFormComponent implements OnInit {
 
   defaultCourse: string = "Angular";
   username: string = '';
+  genders = [
+    {
+      id:1,
+      name: 'Male'
+    },
+    {
+      id:2,
+      name: 'Female'
+    }
+  ];
+
+  defaultGender: string = 'Male';
 }
