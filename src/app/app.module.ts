@@ -49,7 +49,8 @@ import { CompViewChildComponent } from './view-child/comp-view-child/comp-view-c
 import { DirectiveDirective } from './appDirective/directive.directive';
 import { HostListenerDirectiveDirective } from './appDirective/host-listener-directive.directive';
 import { PipesComponent } from './pipes/pipes.component';
-import { CustomPipe } from './pipes/custom.pipe'
+import { CustomPipe } from './pipes/custom.pipe';
+import { FilterPipePipe } from './pipes/filter-pipe.pipe'
 
 const appRoutes: Routes = [
   // {path:'', component: HomeComponent}, we can set default route
@@ -106,7 +107,8 @@ const appRoutes: Routes = [
     DirectiveDirective,
     HostListenerDirectiveDirective,
     PipesComponent,
-    CustomPipe
+    CustomPipe,
+    FilterPipePipe
   ],
   imports: [
     BrowserModule,
