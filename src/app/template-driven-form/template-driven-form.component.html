@@ -4,16 +4,20 @@
         
         <form class="mt-5" (ngSubmit)="onSubmit()" #myForm="ngForm">
 
-            <div class="mb-3">
-              <label for="username" class="form-label" style="color: #e63b6b;"><strong>Username*</strong></label>
-              <input type="text" class="form-control" id="username" placeholder="Enter Username" name="username" [(ngModel)]="username" required>
-              <small *ngIf="username">Your username : {{username}}</small>
-            </div>
+            <div ngModelGroup="userDetails" #myUserDetails="ngModelGroup">
+                <div class="mb-3">
+                <label for="username" class="form-label" style="color: #e63b6b;"><strong>Username*</strong></label>
+                <input type="text" class="form-control" id="username" placeholder="Enter Username" name="username" [(ngModel)]="username" required>
+                <small *ngIf="username">Your username : {{username}}</small>
+                </div>
 
-            <div class="mb-3">
-              <label for="email" class="form-label" style="color: #e63b6b;"><strong>Email*</strong></label>
-              <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" ngModel required email #email="ngModel">
-              <small *ngIf="!email.valid && email.touched" class="text-danger"> Please enter valid Email </small>
+                <div class="mb-3">
+                <label for="email" class="form-label" style="color: #e63b6b;"><strong>Email*</strong></label>
+                <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" ngModel required email #email="ngModel">
+                <small *ngIf="!email.valid && email.touched" class="text-danger"> Please enter valid Email </small>
+                </div>
+
+                <span class="text-danger" *ngIf="!myUserDetails.valid && myUserDetails.touched"> Please Enter Valid Details </span>
             </div>
 
             <div class="mb-3">
