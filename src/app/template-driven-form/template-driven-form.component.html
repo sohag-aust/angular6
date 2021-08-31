@@ -11,7 +11,8 @@
 
             <div class="mb-3">
               <label for="email" class="form-label" style="color: #e63b6b;"><strong>Email*</strong></label>
-              <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" ngModel required email>
+              <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" ngModel required email #email="ngModel">
+              <small *ngIf="!email.valid && email.touched" class="text-danger"> Please enter valid Email </small>
             </div>
 
             <div class="mb-3">
