@@ -6,7 +6,8 @@
 
             <div class="mb-3">
               <label for="username" class="form-label" style="color: #e63b6b;"><strong>Username*</strong></label>
-              <input type="text" class="form-control" id="username" placeholder="Enter Username" name="username" ngModel required>
+              <input type="text" class="form-control" id="username" placeholder="Enter Username" name="username" [(ngModel)]="username" required>
+              <small *ngIf="username">Your username : {{username}}</small>
             </div>
 
             <div class="mb-3">
@@ -17,8 +18,7 @@
 
             <div class="mb-3">
               <label for="course">Select Course</label>
-              <select class="form-control" id="course" name="course" ngModel>
-                <option selected>Open this select menu</option>
+              <select class="form-control" id="course" name="course" [ngModel]="defaultCourse">
                 <option value="Angular">Angular</option>
                 <option value="Java">Spring</option>
                 <option value="React">React</option>

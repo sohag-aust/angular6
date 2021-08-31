@@ -18,4 +18,7 @@ export class TemplateDrivenFormComponent implements OnInit {
   onSubmit() {
     console.log(this.form);
   }
+
+  defaultCourse: string = "Angular";
+  username: string = '';
 }
