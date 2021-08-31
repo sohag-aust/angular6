@@ -42,4 +42,15 @@
 
         </form>
     </div>
+
+    <!-- Extract & Use Form Data -->
+    <div class="row container mx-auto d-flex justify-content-center my-5" *ngIf="submitted">
+      <div class="col-lg-6 rounded shadow py-4" style="background-color: #3dee8c;">
+        <h3 class="mb-4 text-center" style="background-color: #bce322;"><strong> Form Data </strong></h3>
+        <h5>UserName : <strong style="color: #e63b6b;"> {{formData.username}} </strong> </h5>
+        <h5>Email: <strong style="color: #e63b6b;"> {{formData.email}} </strong> </h5>
+        <h5>Course : <strong style="color: #e63b6b;"> {{formData.course}} </strong> </h5>
+        <h5>Gender : <strong style="color: #e63b6b;"> {{formData.gender}} </strong> </h5>
+      </div>
+    </div>
 </div>

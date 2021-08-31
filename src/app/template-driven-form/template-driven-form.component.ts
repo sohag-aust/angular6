@@ -15,8 +15,23 @@ export class TemplateDrivenFormComponent implements OnInit {
 
   @ViewChild('myForm') form!: NgForm;
 
+  submitted: boolean = false;
+  formData = {
+    username:'',
+    email:'',
+    course:'',
+    gender:''
+  };
+
   onSubmit() {
     console.log(this.form);
+    this.submitted = true;
+
+    // setting formData values
+    this.formData.username = this.form.value.userDetails.username;
+    this.formData.email = this.form.value.userDetails.email;
+    this.formData.course = this.form.value.course;
+    this.formData.gender = this.form.value.gender;
   }
 
   defaultCourse: string = "Angular";
