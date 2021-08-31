@@ -50,7 +50,8 @@ import { DirectiveDirective } from './appDirective/directive.directive';
 import { HostListenerDirectiveDirective } from './appDirective/host-listener-directive.directive';
 import { PipesComponent } from './pipes/pipes.component';
 import { CustomPipe } from './pipes/custom.pipe';
-import { FilterPipePipe } from './pipes/filter-pipe.pipe'
+import { FilterPipePipe } from './pipes/filter-pipe.pipe';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component'
 
 const appRoutes: Routes = [
   // {path:'', component: HomeComponent}, we can set default route
@@ -67,7 +68,8 @@ const appRoutes: Routes = [
   {path:'buy-products', component: ParentComponent},
   {path:'life-cycle-hooks', component: LifeCycleHooksComponent},
   {path: 'view-child', component: ViewChildComponent},
-  {path: 'pipes', component: PipesComponent}
+  {path: 'pipes', component: PipesComponent},
+  {path: 'template-driven-Form', component: TemplateDrivenFormComponent}
 ]; 
 
 @NgModule({
@@ -108,7 +110,8 @@ const appRoutes: Routes = [
     HostListenerDirectiveDirective,
     PipesComponent,
     CustomPipe,
-    FilterPipePipe
+    FilterPipePipe,
+    TemplateDrivenFormComponent
   ],
   imports: [
     BrowserModule,

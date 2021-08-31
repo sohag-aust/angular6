@@ -1,0 +1,31 @@
+<div class="row container mx-auto d-flex justify-content-center my-5">
+    <div class="col-lg-6 rounded shadow py-4" style="background-color: #3dee8c;">
+        <h3 class="mb-5 bg-success text-center"><strong> Template Driven Form </strong></h3>
+        
+        <form class="mt-5" (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+            <div class="mb-3">
+              <label for="username" class="form-label" style="color: #e63b6b;"><strong>Username</strong></label>
+              <input type="text" class="form-control" id="username" placeholder="Enter Username" name="username" ngModel>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label" style="color: #e63b6b;"><strong>Email</strong></label>
+              <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" ngModel>
+            </div>
+
+            <div class="mb-3">
+              <label for="course">Select Course</label>
+              <select class="form-control" id="course" name="course" ngModel>
+                <option selected>Open this select menu</option>
+                <option value="Angular">Angular</option>
+                <option value="Java">Spring</option>
+                <option value="React">React</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+    </div>
+</div>
