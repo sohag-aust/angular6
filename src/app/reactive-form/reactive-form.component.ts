@@ -25,8 +25,10 @@ export class ReactiveFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.myReactiveForm = new FormGroup({
-      'username': new FormControl(null, Validators.required), // we can set initial value instead of null, i.e:'shohag'
-      'email': new FormControl(null, [Validators.required, Validators.email]),
+      'userDetails': new FormGroup({
+        'username': new FormControl(null, Validators.required),
+        'email': new FormControl(null, [Validators.required, Validators.email])
+      }),
       'course': new FormControl('Angular'),
       'gender': new FormControl('Male')
     });

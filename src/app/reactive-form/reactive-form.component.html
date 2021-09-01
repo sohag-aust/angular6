@@ -4,7 +4,7 @@
         
         <form class="mt-5" [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
 
-            <div>
+            <div formGroupName="userDetails">
                 <div class="form-group mb-3">
                   <label for="username" class="form-label" style="color: #e63b6b;"><strong>Username*</strong></label>
                   <input type="text" class="form-control" id="username" placeholder="Enter Username" formControlName="username">
@@ -13,7 +13,7 @@
                 <div class="form-group mb-3">
                   <label for="email" class="form-label" style="color: #e63b6b;"><strong>Email*</strong></label>
                   <input type="email" class="form-control" id="email" placeholder="Enter Email" formControlName="email">
-                  <small class="text-danger" *ngIf="!myReactiveForm.get('email').valid && myReactiveForm.get('email').touched">Please enter valid email</small>
+                  <small class="text-danger" *ngIf="!myReactiveForm.get('userDetails.email').valid && myReactiveForm.get('userDetails.email').touched">Please enter valid email</small>
                 </div>
             </div>
 
