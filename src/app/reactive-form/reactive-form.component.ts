@@ -23,9 +23,6 @@ export class ReactiveFormComponent implements OnInit {
     }
   ];
 
-  defaultGender: string = 'Male';
-  defaultCourse: string = "Angular";
-
   ngOnInit(): void {
     this.myReactiveForm = new FormGroup({
       'username': new FormControl(null), // we can set initial value instead of null, i.e:'shohag'
