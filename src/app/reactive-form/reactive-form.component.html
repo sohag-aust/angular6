@@ -13,6 +13,7 @@
                 <div class="form-group mb-3">
                   <label for="email" class="form-label" style="color: #e63b6b;"><strong>Email*</strong></label>
                   <input type="email" class="form-control" id="email" placeholder="Enter Email" formControlName="email">
+                  <small class="text-danger" *ngIf="!myReactiveForm.get('email').valid && myReactiveForm.get('email').touched">Please enter valid email</small>
                 </div>
             </div>
 
