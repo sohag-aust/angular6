@@ -2,7 +2,7 @@
     <div class="col-lg-6 rounded shadow py-4" style="background-color: #3dee8c;">
         <h3 class="mb-5 text-center" style="background-color: #bce322;"><strong> Reactive Form </strong></h3>
         
-        <form class="mt-5" [formGroup]="myReactiveForm">
+        <form class="mt-5" [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
 
             <div>
                 <div class="form-group mb-3">
