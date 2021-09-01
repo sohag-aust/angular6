@@ -1,0 +1,41 @@
+<div class="row container mx-auto d-flex justify-content-center my-5">
+    <div class="col-lg-6 rounded shadow py-4" style="background-color: #3dee8c;">
+        <h3 class="mb-5 text-center" style="background-color: #bce322;"><strong> Reactive Form </strong></h3>
+        
+        <form class="mt-5">
+
+            <div>
+                <div class="form-group mb-3">
+                  <label for="username" class="form-label" style="color: #e63b6b;"><strong>Username*</strong></label>
+                  <input type="text" class="form-control" id="username" placeholder="Enter Username" name="username">
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="email" class="form-label" style="color: #e63b6b;"><strong>Email*</strong></label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="course">Select Course</label>
+                <select class="form-control" id="course" name="course" [ngModel]="defaultCourse">
+                  <option value="Angular">Angular</option>
+                  <option value="Spring">Spring</option>
+                  <option value="React">React</option>
+                </select>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="custom-control custom-radio" *ngFor="let gender of genders">
+                  <input type="radio" class="custom-control-input" id={{gender.id}} name="gender" 
+                            [ngModel]="defaultGender" value="{{gender.name}}">
+  
+                  <label class="custom-control-label" for={{gender.id}}>{{gender.name}}</label>
+                </div>
+            </div>
+  
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+    </div>
+</div>
