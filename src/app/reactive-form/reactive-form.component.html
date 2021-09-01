@@ -18,7 +18,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="course">Select Course</label>
+                <label for="course" style="color: #e63b6b;"><strong>Select Course</strong></label>
                 <select class="form-control" id="course" formControlName="course">
                   <option value="Angular">Angular</option>
                   <option value="Spring">Spring</option>
@@ -35,6 +35,15 @@
                 </div>
             </div>
   
+            <div class="form-group mb-3" formArrayName="skills">
+                <label class="form-label" style="color: #e63b6b;"><strong>Skills</strong></label>
+                <ng-container *ngFor="let skill of myReactiveForm.get('skills')['controls']; index as i">
+                    <input type="text" class="form-control my-2" placeholder="Add Skills" formControlName="{{i}}">
+                </ng-container>
+                
+                <button class="btn btn-light btn-sm btn-add" (click)="onAddSkills()"><i>+</i> Add Skills</button>
+            </div>
+
             <button type="submit" class="btn btn-primary">Submit</button>
 
         </form>

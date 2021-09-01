@@ -3,3 +3,24 @@ select.ng-invalid.ng-touched {
     border: 1px solid red;
     box-shadow: 0 0 13px inset rgba(255, 0, 0, 0.8);
 }
+
+.btn-add {
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(0,0,0, 0.4);
+}
+
+.btn-add i{
+    font-size: 33px;
+    line-height: 12px;
+    display: inline-block;
+    position: relative;
+    top: 6px;
+    margin-right: 3px;
+}
+
+.btn-add:hover {
+    border: 1px solid #007bff;
+    background: #fff;
+    color: #007bff;
+}
