@@ -18,7 +18,7 @@
 
             <div class="mb-3">
                 <label for="course">Select Course</label>
-                <select class="form-control" id="course" formControlName="course" [ngModel]="defaultCourse">
+                <select class="form-control" id="course" formControlName="course">
                   <option value="Angular">Angular</option>
                   <option value="Spring">Spring</option>
                   <option value="React">React</option>
@@ -28,7 +28,7 @@
             <div class="form-group mb-3">
                 <div class="custom-control custom-radio" *ngFor="let gender of genders">
                   <input type="radio" class="custom-control-input" id={{gender.id}} formControlName="gender"
-                            [ngModel]="defaultGender" value="{{gender.name}}">
+                            value="{{gender.name}}">
   
                   <label class="custom-control-label" for={{gender.id}}>{{gender.name}}</label>
                 </div>

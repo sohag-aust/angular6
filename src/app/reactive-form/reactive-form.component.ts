@@ -30,8 +30,8 @@ export class ReactiveFormComponent implements OnInit {
     this.myReactiveForm = new FormGroup({
       'username': new FormControl(null), // we can set initial value instead of null, i.e:'shohag'
       'email': new FormControl(null),
-      'course': new FormControl(null),
-      'gender': new FormControl(null)
+      'course': new FormControl('Angular'),
+      'gender': new FormControl('Male')
     });
   }
 
