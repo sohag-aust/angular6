@@ -8,6 +8,10 @@
                 <div class="form-group mb-3">
                   <label for="username" class="form-label" style="color: #e63b6b;"><strong>Username*</strong></label>
                   <input type="text" class="form-control" id="username" placeholder="Enter Username" formControlName="username">
+                  <small class="text-danger" *ngIf="!myReactiveForm.get('userDetails.username').valid && myReactiveForm.get('userDetails.username').touched">
+                      <span *ngIf="myReactiveForm.get('userDetails.username').errors['required']"> <strong style="font-size: 18px;"> Username is not valid </strong> </span>
+                      <span *ngIf="myReactiveForm.get('userDetails.username').errors['nameIsNotAllowed-404']"> <strong style="font-size: 18px;"> {{myReactiveForm.get('userDetails.username').value}} is not allowed </strong> </span>
+                  </small>
                 </div>
 
                 <div class="form-group mb-3">
