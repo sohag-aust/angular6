@@ -51,7 +51,7 @@ export class ReactiveFormComponent implements OnInit {
 
   onSubmit() {
     console.log(this.myReactiveForm);
-    
+
     this.formSubmitted = true;
 
     // setting formData values
@@ -60,6 +60,17 @@ export class ReactiveFormComponent implements OnInit {
     this.formData.course = this.myReactiveForm.value.course;
     this.formData.gender = this.myReactiveForm.value.gender;
     this.formData.skills = this.myReactiveForm.value.skills;
+
+    // reset form value
+    this.myReactiveForm.reset({
+      'userDetails': {
+        'username': '',
+        'email': ''
+      },
+      'course': 'Angular',
+      'gender': 'Male',
+      'skills': []
+    })
   }
 
   onAddSkills() {
