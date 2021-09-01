@@ -39,8 +39,27 @@ export class ReactiveFormComponent implements OnInit {
     });
   }
 
+  formSubmitted: boolean = false;
+  addSkillsButtonClicked: boolean = true;
+  formData = {
+    username:'',
+    email:'',
+    course:'',
+    gender:'',
+    skills:[]
+  };
+
   onSubmit() {
     console.log(this.myReactiveForm);
+    
+    this.formSubmitted = true;
+
+    // setting formData values
+    this.formData.username = this.myReactiveForm.value.userDetails.username;
+    this.formData.email = this.myReactiveForm.value.userDetails.email;
+    this.formData.course = this.myReactiveForm.value.course;
+    this.formData.gender = this.myReactiveForm.value.gender;
+    this.formData.skills = this.myReactiveForm.value.skills;
   }
 
   onAddSkills() {
