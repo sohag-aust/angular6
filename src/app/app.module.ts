@@ -52,7 +52,9 @@ import { PipesComponent } from './pipes/pipes.component';
 import { CustomPipe } from './pipes/custom.pipe';
 import { FilterPipePipe } from './pipes/filter-pipe.pipe';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
-import { ReactiveFormComponent } from './reactive-form/reactive-form.component'
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { EmployeeListComponent } from './kudvenkat-componentCommunication/employee-list/employee-list.component';
+import { EmployeeCountComponent } from './kudvenkat-componentCommunication/employee-count/employee-count.component'
 
 const appRoutes: Routes = [
   // {path:'', component: HomeComponent}, we can set default route
@@ -71,7 +73,8 @@ const appRoutes: Routes = [
   {path: 'view-child', component: ViewChildComponent},
   {path: 'pipes', component: PipesComponent},
   {path: 'template-driven-Form', component: TemplateDrivenFormComponent},
-  {path: 'reactive-Form', component: ReactiveFormComponent}
+  {path: 'reactive-Form', component: ReactiveFormComponent},
+  {path: 'kudvenkat-component-communication', component: EmployeeListComponent}
 ]; 
 
 @NgModule({
@@ -114,7 +117,9 @@ const appRoutes: Routes = [
     CustomPipe,
     FilterPipePipe,
     TemplateDrivenFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    EmployeeListComponent,
+    EmployeeCountComponent
   ],
   imports: [
     BrowserModule,

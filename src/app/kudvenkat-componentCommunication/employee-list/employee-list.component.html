@@ -1,0 +1,29 @@
+<app-employee-count [all] = "getTotalEmployeesCount()" 
+                    [male] = "getTotalMaleEmployeesCount()"
+                    [female] = "getTotalFemaleEmployeesCount()" 
+                    (countRadioButtonSelectionChanged) = "onEmployeeCountRadioButtonChange($event)"> <!-- line(1-3): passing parent component value to child component & (line-4): passing child component value to parent component -->
+</app-employee-count>
+
+<br><br>
+
+<table class="table table-danger table-striped w-50 mx-auto">
+    <thead>
+      <tr>
+        <th scope="col"># EID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Annual Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let employee of employees;">
+        <tr *ngIf="selectedEmployeeCountRadioButton === 'All' || selectedEmployeeCountRadioButton === employee.gender">
+          <td>{{employee.empId}}</td>
+          <td>{{employee.name}}</td>
+          <td>{{employee.gender}}</td>
+          <td>{{employee.annualSalary}}</td>
+        </tr>
+      </ng-container>
+      
+    </tbody>
+  </table>
